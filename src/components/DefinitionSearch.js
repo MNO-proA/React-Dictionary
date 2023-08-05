@@ -40,6 +40,7 @@ const DefinitionSearch = () => {
             }}
           />
         </form>
+        {console.log(firstWord)}
       </div>
     </div>
   );

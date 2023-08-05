@@ -16,7 +16,7 @@ export default function Header() {
     >
       <Container>
         <Link to={"/"} className="navbar-brand">
-          Dictionary
+          Dictionary.io
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -37,17 +37,17 @@ export default function Header() {
           </Nav>
           <Nav>
             {/* <Nav.Link href="#deets">Signin</Nav.Link> */}
-            <li class="nav-item">
+            <li className="nav-item">
               <NavLink to={"/"} className="nav-link">
                 Thesaurus
               </NavLink>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <NavLink to={"/"} className="nav-link">
                 Translate
               </NavLink>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <NavLink to={"/"} className="nav-link">
                 Grammar
               </NavLink>

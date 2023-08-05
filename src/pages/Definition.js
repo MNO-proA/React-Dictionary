@@ -4,6 +4,7 @@ import NotFound from "../components/NotFound";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Layout from "../components/Layout";
+// import SearchAgain from "../components/SearchAgain";
 
 const Definition = () => {
   const [word, setWord] = useState("");
@@ -47,7 +48,7 @@ const Definition = () => {
       .catch((e) => {
         console.log(e.message);
       });
-  }, []);
+  }, [search]);
 
   if (notFound === true) {
     return (
@@ -70,17 +71,17 @@ const Definition = () => {
     <>
       <Layout>
         <Container>
-          <Row style={{ marginTop: "50px" }}>
+          <Row style={{ marginTop: "30px" }}>
             <Col md={{ span: 6, offset: 3 }}>
               {word || phonetics ? (
                 <>
-                  <Card>
+                  <Card className="animate__animated animate__fadeIn">
                     <Card.Header as="h6">
                       Definition of {search} from dictionaryapi.dev
                     </Card.Header>
                     <Card.Body>
                       <Card.Title style={{ color: "blueviolet" }}>
-                        <p style={{ fontSize: "60px" }}>{search}</p>
+                        <p style={{ fontSize: "40px" }}>{search}</p>
                         {phonetics.map((phonic) => {
                           return (
                             <div>
@@ -111,6 +112,7 @@ const Definition = () => {
                       >
                         Search again
                       </Link>
+                      {/* <SearchAgain /> */}
                     </Card.Body>
                   </Card>
                 </>
